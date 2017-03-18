@@ -15,12 +15,13 @@
 <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 <script src="libs/angular.min.js"></script>
+<script src="libs/angular-route.min.js"></script>
 
 <script src="js/app.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
 
 		<nav
 				class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
@@ -56,49 +57,15 @@
 		</nav>
 
 		<div class="container container-jon">
-				<h1>Fatjona Web</h1>
-				<label>Emri:</label> <input type="text" ng-model="emri"
-						class="form-control" placeholder="Shkruaj Emrin" />
-				<h4>Ckemi {{ emri.split("").reverse().join("") }}</h4>
-
-				<input type="text" ng-model="mbiemri" class="form-control input-sm"
-						placeholder="Shkruaj Mbiemrin" />
-				<h4>Ckemi Zoti {{ mbiemri }}</h4>
-				<h5>{{ emri +""+ mbiemri.toUpperCase()}}</h5>
-
-				<table class="table table-inverse" ng-if=" emri=='jona' " >
-						<thead>
-								<tr>
-										<th>Mario</th>
-										<th>Jona</th>
-										<th>Love</th>
-						</thead>
-						<tbody>
-								<tr>
-										<th scope="row">1991</th>
-										<td>Te dua</td>
-										<td>Pushi</td>
-
-								</tr>
-								<tr>
-										<th scope="row">1991</th>
-										<td>Pleshti</td>
-										<td>Gjumash</td>
-
-								</tr>
-
-
-						</tbody>
-
-
-
-
-				</table>
-
+		
+		  <button class="btn btn-primary btn-sm" ng-click="aktivizotekst()">Kliko ketu</button>
+		
+		    <p ng-if="shfaqtekst">
+		    
+		    jona mario pleshti nk dua te fle gjum fare dua te rri zgjuar dhe te programoj
+		    
+		    </p>
 		</div>
-
-
-
 		<!-- /.container -->
 
 
