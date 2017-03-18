@@ -51,18 +51,54 @@
 														class="dropdown-item" href="#">Something else here</a>
 										</div></li>
 						</ul>
-					
+
 				</div>
 		</nav>
 
 		<div class="container container-jon">
 				<h1>Fatjona Web</h1>
 				<label>Emri:</label> <input type="text" ng-model="emri"
-						placeholder="Shkruaj Emrin" />
+						class="form-control" placeholder="Shkruaj Emrin" />
+				<h4>Ckemi {{ emri.split("").reverse().join("") }}</h4>
 
-				<h4>Ckemi {{ emri }}</h4>
+				<input type="text" ng-model="mbiemri" class="form-control input-sm"
+						placeholder="Shkruaj Mbiemrin" />
+				<h4>Ckemi Zoti {{ mbiemri }}</h4>
+				<h5>{{ emri +""+ mbiemri.toUpperCase()}}</h5>
+
+				<table class="table table-inverse" ng-if=" emri=='jona' " >
+						<thead>
+								<tr>
+										<th>Mario</th>
+										<th>Jona</th>
+										<th>Love</th>
+						</thead>
+						<tbody>
+								<tr>
+										<th scope="row">1991</th>
+										<td>Te dua</td>
+										<td>Pushi</td>
+
+								</tr>
+								<tr>
+										<th scope="row">1991</th>
+										<td>Pleshti</td>
+										<td>Gjumash</td>
+
+								</tr>
+
+
+						</tbody>
+
+
+
+
+				</table>
 
 		</div>
+
+
+
 		<!-- /.container -->
 
 
